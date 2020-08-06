@@ -1,0 +1,52 @@
+/* Hero Style Start */
+/*Some attributes are overriden and adding the style we need in Privacy Policy*/
+.hero {
+    background-position: bottom;
+    height: auto;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /*Page title style*/
+  /*That style is the same as section-title in the Home Page index.html*/
+
+  .page-title {
+    color: #fce138;
+    display: inline-block;
+    border-bottom: 4px solid; /*to recalculate to size of the border-bottom ; size of content of H2 DRAW a border*/
+    margin-bottom: 35px;
+    padding: 0 80px 15px 80px;
+    font-weight: normal;
+    font-size: 42px;
+    font-style: italic;
+}
+
+/*Adding Style to Privacy Policy content*/
+.secundary-content{
+    width: 80%;
+    color: #024e76;
+    margin: 0 auto; /*Center whole section */
+}
+
+/*Adding Style just H3 inside the Article tag*/
+.secundary-content h3{
+    font-size: 25px;
+    margin: 20px 0px; /*top bottom =20 and left right 0*/
+}
+
+/*Styling P tag*/
+.secundary-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px 0px;
+    text-align: justify;  /*Adding Justify text style*/
+
+}
+
+.secundary-content ul{
+    margin: 15px 0px 15px 0px;
+}
+
+.secundary-content li{
+    color: #39a6b2;
+}
