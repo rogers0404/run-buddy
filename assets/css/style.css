@@ -54,7 +54,8 @@
   }*/
 
   header nav ul li a {
-    margin: 0 30px;
+    /*margin: 0 30px;     Adding media queries*/
+    padding: 0px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
     /*font-size: 16px;*/ /*to adjust the size of the font to 1.55% of the width of the screen*/
@@ -107,6 +108,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: flex-start;   /**Adding Media queries*/
   }
    /*Adding text for the mock up proposed*/
   .hero-cta {
@@ -115,7 +117,8 @@
     margin: 3.5%;
     color: #fff;
     font-size: 18px;
-    line-height: 1.3;
+    /*line-height: 1.3; Adding Media queries */  
+    line-height: 1.2;
   }
   
   .hero-cta h2 {
@@ -199,7 +202,7 @@
   }
 
   .section-title {
-    font-size: 55px;
+    font-size: 48px;   /*Changing 55 to 48 for Media Queries purposes*/
     color: #024e76;
     border-bottom: 3px solid; /*to recalculate to size of the border-bottom ; size of content of H2 DRAW a border*/
     padding-bottom: 20px;
@@ -432,5 +435,9 @@
       .flex-row {
         display: flex;
       }
-    
+
+      /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+
+}
 
