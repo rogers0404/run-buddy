@@ -19,6 +19,14 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        position: -webkit-sticky;
+        position: sticky; /*to mantain the header in one place sticky*/
+        top: 0;
+        background-image: url("../images/hero-bg.jpg");
+        background-size: cover;
+       /* background-position: center;*/
+        background-attachment: fixed;
+        background-position: 80%;
   }
  
   header h1 {
@@ -26,6 +34,7 @@
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
     /*display: inline;*/ /*deleted, i am going to use flex*/ 
   }
@@ -59,6 +68,14 @@
     font-weight: lighter;
     font-size: 1.55vw;
     /*font-size: 16px;*/ /*to adjust the size of the font to 1.55% of the width of the screen*/
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
   }
 /***************************************************************************/
 
@@ -102,13 +119,15 @@
     background-image: url("../images/hero-bg.jpg");
     /*height: 600px;      Felxing     */
     background-size: cover;
-    background-position: center;
+    /*background-position: center;*/
     /*position: relative;   Using Flox Feature*/
     /*Appling Flex to the box*/
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;   /**Adding Media queries*/
+    background-attachment: fixed;
+    background-position: 80%;
   }
    /*Adding text for the mock up proposed*/
   .hero-cta {
@@ -119,16 +138,18 @@
     font-size: 18px;
     /*line-height: 1.3; Adding Media queries */  
     line-height: 1.2;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   .hero-cta h2 {
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   .hero-form {
-    background-color: #fce138;
+    background-color:rgba(252, 225, 56, 0.8);
     padding: 20px;
     color: #024e76;
     border-style: solid;
@@ -140,6 +161,8 @@
     position: absolute;
     bottom: 120px;
     right: 140px;          Flexing*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
   }
 
   .hero-form h3 {
@@ -159,7 +182,15 @@
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
   }
+
+  /* create a new rule for focus state */
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+}
 
   .hero-form label {
     margin: 0 5px;
@@ -171,6 +202,11 @@
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .hero-form button:hover {
+    background-color: #39a6b2;  
   }
   /* HERO STYLES END */
   /********************************************************************/
@@ -288,12 +324,21 @@
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #39a6b2;
+     /* re-add alongside existing declarations */
+    border-bottom: 1px solid #39a6b2;          /* applying property last-child*/
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
   }
+
+  .step:last-child {
+    border-bottom: none;
+  }
+
+ /*  .step:nth-child(even) {
+    border-bottom: 1px solid #39a6b2;
+  } */
 /*****************************************************************************/
 
   /*testing with and without .trainers class*/
@@ -406,7 +451,15 @@
         width: 100%;
         margin-bottom: 15px;
         margin-top: 5px;
+        border-radius: 10px;
+        background-color: rgba(255,255,255, 0.75);
       }
+
+      /* create a new css rule for focus state */
+.contact-form input:focus, .contact-form textarea:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+}
 
       .contact-form button{
         width: 100%;
@@ -416,6 +469,12 @@
         text-align: center;
         padding: 15px 0px;
         font-size: 16px;
+        border-radius: 10px;
+      }
+
+      .contact-form button:hover {
+        color: #fce138;
+        background: #39a6b2;
       }
       
       .contact-info a {
@@ -496,6 +555,7 @@
         header {
           padding-bottom: 0;
           justify-content: center;
+          position: relative
         }
       
         header h1 {
